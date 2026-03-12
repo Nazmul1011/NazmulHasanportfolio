@@ -68,10 +68,9 @@ const HeroSection = () => {
       >
         Hi! I'm <span className="font-bold text-premium-indigo">Nazmul Hasan</span> 👋
       </motion.p>
-
       {/* Dynamic Main Headline */}
       <div className="h-32 md:h-44 flex flex-col items-center justify-center mb-6">
-        {/* <AnimatePresence mode="wait"> */}
+        <AnimatePresence mode="wait">
           <motion.h1 
             key={roles[roleIndex]}
             initial={{ opacity: 0, y: 20 }}
@@ -81,7 +80,7 @@ const HeroSection = () => {
           >
             {roles[roleIndex]}
           </motion.h1>
-        {/* </AnimatePresence> */}
+        </AnimatePresence>
         <motion.span 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

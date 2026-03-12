@@ -14,7 +14,7 @@ import useScrollReveal from "../../components/useScrollReveal";
 
 
 function Home() {
-  // useScrollReveal(); // Removed duplicate call
+  useScrollReveal(); // 👈 activates reveal for all sections
 
   return (
     <>

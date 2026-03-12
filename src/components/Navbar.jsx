@@ -105,17 +105,31 @@ function Navbar() {
             </ScrollLink>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          >
-            {isMenuOpen ? (
-              <HiX className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-            ) : (
-              <HiMenu className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-            )}
-          </button>
+          <div className="flex md:hidden items-center gap-2">
+            {/* 🌙 Theme Toggle (Mobile) */}
+            <button
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              {theme === "light" ? (
+                <FaSun className="w-5 h-5 text-yellow-500" />
+              ) : (
+                <FaMoon className="w-5 h-5 text-indigo-400" />
+              )}
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              {isMenuOpen ? (
+                <HiX className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+              ) : (
+                <HiMenu className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -142,6 +156,21 @@ function Navbar() {
                   {link.label}
                 </ScrollLink>
               ))}
+
+              {/* Theme Toggle (Mobile Menu List)
+              <div className="px-4 py-2 flex items-center justify-between border-t border-gray-100 dark:border-gray-800 mt-2">
+                <span className="text-gray-700 dark:text-gray-300 font-medium">Appearance</span>
+                <button
+                  onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors"
+                >
+                  {theme === "light" ? (
+                    <><FaSun className="text-yellow-500" /> Light</>
+                  ) : (
+                    <><FaMoon className="text-indigo-400" /> Dark</>
+                  )}
+                </button>
+              </div> */}
 
               {/* Contact Button */}
               <div className="pt-2 border-t border-gray-100 dark:border-gray-800 mt-2">

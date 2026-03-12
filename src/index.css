@@ -74,12 +74,16 @@ html.dark {
   }
 }
 
-/* Hidden by default */
-/* Temporarily forced visible for debugging */
+/* Reveal animations restored */
 .reveal {
-  opacity: 1 !important;
-  transform: none !important;
-  transition: none !important;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* When visible */
