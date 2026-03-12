@@ -1,9 +1,13 @@
 import { HiDownload } from "react-icons/hi";
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-export const HeroSection = () => {
+const roles = ["Flutter Developer", "Full Stack Engineer", "Problem Solver"];
+
+const HeroSection = () => {
   const [isDark, setIsDark] = useState(false);
+  const [roleIndex, setRoleIndex] = useState(0);
 
   // Detect theme mode dynamically
   useEffect(() => {
@@ -20,103 +24,153 @@ export const HeroSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Role rotation logic
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section
-      className="reveal flex flex-col items-center justify-center text-center 
+      id="hero-section"
+      className="bg-aurora min-h-[90vh] flex flex-col items-center justify-center text-center 
       py-24 px-6 bg-white dark:bg-darkbg transition-all duration-700 ease-in-out"
     >
-      {/* Profile Image */}
-      <div className="fade-child mb-8">
-        <img
-          src={isDark ? "/unhappay.png" : "/happynazmul.png"}
-          alt="Nazmul Hasan"
-          className="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover shadow-2xl 
-          transition-all duration-700 ease-in-out"
-        />
-      </div>
+      {/* Floating Profile Image */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="mb-8 relative"
+      >
+        <motion.div
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <img
+            src={isDark ? "/unhappay.png" : "/happynazmul.png"}
+            alt="Nazmul Hasan"
+            className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-2xl 
+            ring-4 ring-white/20 dark:ring-white/10 transition-all duration-700"
+          />
+        </motion.div>
+        <div className="absolute -bottom-2 -right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-white dark:border-darkbg shadow-lg"></div>
+      </motion.div>
 
       {/* Greeting */}
-      <p className="fade-child text-gray-600 dark:text-gray-300 text-lg mb-2">
-        Hi! I'm{" "}
-        <span className="font-semibold text-gray-800 dark:text-white">
-          Nazmul Hasan
-        </span>{" "}
-        👋
-      </p>
+      <motion.p 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+        className="text-gray-600 dark:text-gray-300 text-lg mb-4 flex items-center gap-2"
+      >
+        Hi! I'm <span className="font-bold text-premium-indigo">Nazmul Hasan</span> 👋
+      </motion.p>
 
-      {/* Main Headline */}
-      <h1 className="fade-child text-4xl md:text-6xl font-semibold text-gray-900 dark:text-white leading-tight mb-2">
-        Flutter Developer <br className="hidden md:block" />{" "}
-        <span className="text-6xl">Crafting Modern Mobile Apps.</span>
-      </h1>
+      {/* Dynamic Main Headline */}
+      <div className="h-32 md:h-44 flex flex-col items-center justify-center mb-6">
+        <AnimatePresence mode="wait">
+          <motion.h1 
+            key={roles[roleIndex]}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="text-4xl md:text-7xl font-bold text-gray-900 dark:text-white leading-tight"
+          >
+            {roles[roleIndex]}
+          </motion.h1>
+        </AnimatePresence>
+        <motion.span 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          className="text-2xl md:text-3xl text-gray-500 dark:text-gray-400 mt-2 font-light"
+        >
+          Crafting Modern Digital Experiences
+        </motion.span>
+      </div>
 
       {/* Current Role */}
-      <p className="fade-child text-gray-500 dark:text-gray-400 text-base md:text-lg mb-6">
-        Working as a{" "}
-        <span className="font-medium text-gray-800 dark:text-white">
-          Junior Flutter Developer
-        </span>{" "}
-        at{" "}
-        <span className="font-medium text-gray-800 dark:text-white">
-          Miicon Solution
-        </span>{" "}
-        (June 2025 – Present)
-      </p>
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8 }}
+        className="bg-gray-100/50 dark:bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full mb-8 text-sm md:text-base border border-gray-200 dark:border-white/10"
+      >
+        <span className="text-gray-500 dark:text-gray-400">Current:</span>{" "}
+        <span className="font-medium text-gray-800 dark:text-gray-200">
+          Senior Full-Stack Developer @ Miicon Solution
+        </span>
+      </motion.div>
 
       {/* Description */}
-      <p className="fade-child text-gray-500 dark:text-gray-400 max-w-xl mx-auto mb-10">
-        I’m a passionate Flutter developer with over 6 months of hands-on
-        experience in building cross-platform mobile apps using{" "}
-        <span className="font-semibold text-gray-800 dark:text-white">
-          GetX, Firebase, and clean architecture
-        </span>
-        . I focus on delivering elegant UIs and smooth user experiences.
-      </p>
+      <motion.p 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-10 text-lg leading-relaxed font-medium"
+      >
+        I specialize in building high-performance cross-platform apps and 
+        advanced web ecosystems using <span className="text-gray-900 dark:text-white font-bold">Flutter, Next.js, and Node.js</span>. 
+        Focused on scalable architecture and premium user experiences.
+      </motion.p>
 
       {/* Buttons */}
-      <div className="fade-child flex flex-col sm:flex-row items-center gap-4">
-        {/* 🔗 Social Links (Black & White) */}
-        <div className="flex items-center gap-6 text-2xl">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2 }}
+        className="flex flex-col sm:flex-row items-center gap-6"
+      >
+        {/* 🔗 Social Links (Glass) */}
+        <div className="flex items-center gap-4 bg-gray-100/50 dark:bg-white/5 p-2 rounded-2xl backdrop-blur-md border border-gray-200 dark:border-white/10">
           <a
-            href="https://linkedin.com/in/nazmulhasan"
+            href="https://www.linkedin.com/in/nazmulhasan-/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
+            className="w-12 h-12 flex items-center justify-center rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:scale-110 shadow-sm transition-all duration-300"
           >
-            <FaLinkedin />
+            <FaLinkedin className="text-xl" />
           </a>
           <a
-            href="https://github.com/nazmu11011"
+            href="https://github.com/Nazmul1011"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
+            className="w-12 h-12 flex items-center justify-center rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:scale-110 shadow-sm transition-all duration-300"
           >
-            <FaGithub />
+            <FaGithub className="text-xl" />
           </a>
           <a
-            href="https://facebook.com/nazmul.hasan"
+            href="https://www.facebook.com/nazmul.hasan.394761"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
+            className="w-12 h-12 flex items-center justify-center rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:scale-110 shadow-sm transition-all duration-300"
           >
-            <FaFacebook />
+            <FaFacebook className="text-xl" />
           </a>
         </div>
 
         {/* Resume Download Button */}
         <a
           href="/Nazmul_Hasan_Resume.pdf"
-          download="Nazmul_Hasan_Resume.pdf"
-          className="inline-flex items-center justify-center gap-2 
-          border border-gray-400 dark:border-gray-600 
-          text-gray-900 dark:text-gray-200 
-          px-6 py-3 rounded-full text-sm md:text-base font-medium 
-          hover:bg-gray-100 dark:hover:bg-gray-800 
-          transition-all duration-500"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative inline-flex items-center justify-center gap-2 
+          bg-gray-900 dark:bg-white text-white dark:text-gray-900
+          px-8 py-4 rounded-2xl text-base font-semibold
+          hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]
+          transition-all duration-300 active:scale-95 overflow-hidden"
         >
-          My Resume <HiDownload className="text-lg" />
+          <span className="relative z-10 flex items-center gap-2">
+            My Resume <HiDownload className="text-xl group-hover:bounce" />
+          </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-premium-indigo to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 };
+
+export default HeroSection;

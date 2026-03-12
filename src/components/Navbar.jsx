@@ -44,7 +44,7 @@ function Navbar() {
           <div className="hidden md:flex items-center space-x-1">
             {[
               { to: "hero-section", label: "Home" },
-              { to: "key-features-section", label: "About me" },
+              { to: "key-features-section", label: "Expertise" },
               { to: "service-section", label: "Services" },
               { to: "testimonial-section", label: "My Work" },
               { to: "Contactus-section", label: "Contact me" },

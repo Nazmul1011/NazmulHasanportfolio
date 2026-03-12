@@ -83,7 +83,7 @@ export const FooterHome = () => {
   </a>
 
   <a
-    href="https://www.facebook.com/nazmul.hasan.394761/"
+    href="https://www.facebook.com/nazmul.hasan.394761"
     target="_blank"
     rel="noreferrer"
     className="flex items-center gap-2 transition font-bold 

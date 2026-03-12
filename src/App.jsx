@@ -7,6 +7,8 @@ import { FooterHome } from "./pages/home/footerHome";
 import Home from "./pages/home/home.jsx";
 import Help from "./pages/help/Help.jsx";
 import ContactUs from "./pages/Contact.jsx";
+import Methodology from "./pages/home/Methodology.jsx";
+import MobileMethodology from "./pages/home/MobileMethodology.jsx";
 import useScrollReveal from "./components/useScrollReveal.js";
 
 // ---------------- Layouts ----------------
@@ -37,6 +39,8 @@ export default function App() {
           <Route path="/feature" element={<div>Feature</div>} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/help" element={<Help />} />
+          <Route path="/methodology" element={<Methodology />} />
+          <Route path="/mobile-methodology" element={<MobileMethodology />} />
         </Route>
 
         {/* 404 fallback */}

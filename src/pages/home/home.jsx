@@ -2,8 +2,10 @@
 
 
 import React from "react";
-import { HeroSection } from "./HeroSection";
-import { KeyFeaturesSection } from "./KeyFeaturesSection";
+import HeroSection from "./HeroSection";
+import KeyFeaturesSection from "./KeyFeaturesSection";
+import FlutterShowcase from "./FlutterShowcase";
+import WebDevShowcase from "./WebDevShowcase";
 import { FooterHome } from "./footerHome";
 import Service from "./service";
 import Testimonial from "./testimonial";
@@ -27,6 +29,9 @@ function Home() {
           <KeyFeaturesSection />
         </section>
       </div>
+
+      <FlutterShowcase />
+      <WebDevShowcase />
 
       <div className="reveal" id="service-section">
         <Service />

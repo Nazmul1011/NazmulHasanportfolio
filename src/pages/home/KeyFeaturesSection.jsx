@@ -45,7 +45,7 @@ export const KeyFeaturesSection = () => {
     {
       icon: <FaBriefcase className="text-3xl text-blue-600 mb-3" />,
       title: "Experience",
-      desc: "Working as a Junior Flutter Developer at Miicon Solution (June 2025 – Present)",
+      desc: "Working as a Full-Stack Developer at Miicon Solution (June 2024 – Present)",
     },
   ];
 
@@ -73,7 +73,7 @@ export const KeyFeaturesSection = () => {
           <h2 className="text-4xl font-semibold text-gray-900 dark:text-white">
             About me
           </h2>
-        </div>
+            </div>
 
         {/* Main Content */}
         <div className="flex flex-col md:flex-row items-center gap-10 fade-child">
@@ -88,19 +88,18 @@ export const KeyFeaturesSection = () => {
 
           {/* Right Side - Description */}
           <div className="w-full md:w-2/3 text-left fade-child">
-            <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-10">
+            <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-10 font-medium">
               I am a{" "}
-              <span className="font-semibold text-gray-800 dark:text-white">
-                Flutter Developer
+              <span className="font-bold text-gray-800 dark:text-white">
+                Full-Stack & Flutter Developer
               </span>{" "}
-              with over 6 months of professional experience in building
-              cross-platform mobile applications. Currently, I’m working as a{" "}
-              <span className="font-semibold text-gray-800 dark:text-white">
-                Junior Flutter Developer at Miicon Solution
+              with over 1 year of professional experience in crafting
+              high-performance mobile and web applications. Currently, I’m driving development as a{" "}
+              <span className="font-bold text-gray-800 dark:text-white">
+                Developer at Miicon Solution
               </span>
-              , where I focus on developing scalable, high-performance apps with
-              clean architecture and modern UI design principles. My goal is to
-              build seamless and visually engaging mobile experiences.
+              , where I combine the power of Flutter with modern web stacks like Next.js and Node.js to build 
+              scalable, secure, and visually stunning digital products. I don't just write code; I architect systems that grow.
             </p>
 
             {/* Info Cards */}
@@ -132,14 +131,14 @@ export const KeyFeaturesSection = () => {
               <div className="flex flex-wrap items-center gap-6">
                 {tools.map((tool, index) => (
                   <div
-                    key={index}
+              key={index}
                     className="w-14 h-14 flex items-center justify-center 
                     bg-gray-100 dark:bg-gray-800 rounded-full 
                     hover:shadow-lg hover:-translate-y-1 
                     transition-all duration-500"
                   >
                     {tool.icon}
-                  </div>
+                </div>
                 ))}
               </div>
             </div>
