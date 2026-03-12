@@ -71,22 +71,22 @@ const HeroSection = () => {
 
       {/* Dynamic Main Headline */}
       <div className="h-32 md:h-44 flex flex-col items-center justify-center mb-6">
-        <AnimatePresence mode="wait">
+        {/* <AnimatePresence mode="wait"> */}
           <motion.h1 
             key={roles[roleIndex]}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="text-4xl md:text-7xl font-bold text-gray-900 dark:text-white leading-tight"
+            className="text-3xl sm:text-4xl md:text-7xl font-bold text-gray-900 dark:text-white leading-tight"
           >
             {roles[roleIndex]}
           </motion.h1>
-        </AnimatePresence>
+        {/* </AnimatePresence> */}
         <motion.span 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="text-2xl md:text-3xl text-gray-500 dark:text-gray-400 mt-2 font-light"
+          className="text-xl sm:text-2xl md:text-3xl text-gray-500 dark:text-gray-400 mt-2 font-light"
         >
           Crafting Modern Digital Experiences
         </motion.span>
@@ -101,7 +101,7 @@ const HeroSection = () => {
       >
         <span className="text-gray-500 dark:text-gray-400">Current:</span>{" "}
         <span className="font-medium text-gray-800 dark:text-gray-200">
-          Senior Full-Stack Developer @ Miicon Solution
+          Flutter Developer @ Miicon Solution
         </span>
       </motion.div>
 
@@ -110,7 +110,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-10 text-lg leading-relaxed font-medium"
+        className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-10 text-base sm:text-lg leading-relaxed font-medium"
       >
         I specialize in building high-performance cross-platform apps and 
         advanced web ecosystems using <span className="text-gray-900 dark:text-white font-bold">Flutter, Next.js, and Node.js</span>. 

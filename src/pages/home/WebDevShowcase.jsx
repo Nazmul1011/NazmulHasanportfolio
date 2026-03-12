@@ -40,10 +40,10 @@ const WebDevShowcase = () => {
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-blue-500/5 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         
         {/* Left Side: SaaS + Portfolio Layered Mockup */}
-        <div className="relative flex justify-center order-2 lg:order-1 perspective-[2000px]">
+        <div className="relative flex justify-center order-2 lg:order-1 perspective-[2000px] overflow-visible lg:overflow-visible">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -141,7 +141,7 @@ const WebDevShowcase = () => {
             <motion.div 
                animate={{ y: [0, -15, 0] }}
                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-               className="absolute -top-10 -right-10 w-64 bg-white dark:bg-slate-800 p-6 rounded-[2rem] shadow-2xl border border-white/20 dark:border-white/10 backdrop-blur-3xl z-20"
+               className="absolute -top-10 -right-4 sm:-right-10 w-48 sm:w-64 bg-white dark:bg-slate-800 p-4 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] shadow-2xl border border-white/20 dark:border-white/10 backdrop-blur-3xl z-20"
             >
                <div className="flex items-center gap-4 mb-4">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl shadow-lg">
@@ -171,7 +171,7 @@ const WebDevShowcase = () => {
             <motion.div
                animate={{ y: [0, 15, 0], scale: [1, 1.05, 1] }}
                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-               className="absolute -bottom-16 -left-8 w-56 bg-white dark:bg-slate-800 p-6 rounded-[2rem] shadow-2xl border border-white/20 dark:border-white/10 backdrop-blur-xl z-20"
+               className="absolute -bottom-16 -left-4 sm:-left-8 w-48 sm:w-56 bg-white dark:bg-slate-800 p-4 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] shadow-2xl border border-white/20 dark:border-white/10 backdrop-blur-xl z-20"
             >
               <div className="flex flex-col items-center text-center">
                  <div className="w-14 h-14 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border-4 border-indigo-500 flex items-center justify-center text-indigo-500 text-2xl mb-4 shadow-inner">
@@ -207,7 +207,7 @@ const WebDevShowcase = () => {
             viewport={{ once: true }}
           >
             <span className="text-indigo-600 font-bold tracking-[0.4em] uppercase text-xs mb-4 block italic">Building the Future</span>
-            <h2 className="text-6xl md:text-7xl font-black mt-2 dark:text-white leading-none tracking-tighter">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black mt-2 dark:text-white leading-none tracking-tighter">
               Scalable <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600 italic">Web Ecosystems</span>
             </h2>

@@ -156,8 +156,8 @@ export default function ContactUs() {
             </div>
           </form>
 
-          {/* Side Info Cards (Hidden on mobile) */}
-          <div className="absolute -right-40 top-1/2 -translate-y-1/2 flex flex-col gap-6 hidden xl:flex">
+          {/* Side Info Cards (Hidden on mobile/tablet) */}
+          <div className="absolute -right-4 lg:-right-20 xl:-right-40 top-1/2 -translate-y-1/2 flex flex-col gap-6 hidden xl:flex">
              <a 
                 href="mailto:nazmultec1011@gmail.com"
                 className="bg-white dark:bg-gray-800/80 p-8 shadow-2xl rounded-3xl border border-gray-100 dark:border-white/10 w-72 backdrop-blur-lg group/card hover:-translate-y-2 transition-transform duration-300 block text-left"

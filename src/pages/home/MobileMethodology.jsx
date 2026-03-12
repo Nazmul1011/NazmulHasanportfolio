@@ -204,7 +204,7 @@ const MobileMethodology = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-8xl font-black dark:text-white leading-none tracking-tighter"
+            className="text-4xl sm:text-5xl md:text-8xl font-black dark:text-white leading-none tracking-tighter"
           >
             From Idea to <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600 italic">App Store Launch</span>
@@ -244,10 +244,10 @@ const MobileMethodology = () => {
 
                 {/* Content */}
                 <div className="flex-1 pt-2">
-                  <h3 className="text-2xl md:text-3xl font-black dark:text-white tracking-tight mb-4 group-hover:text-indigo-500 transition-colors">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black dark:text-white tracking-tight mb-4 group-hover:text-indigo-500 transition-colors">
                     {point.title}
                   </h3>
-                  <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed font-medium mb-6">
+                  <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 leading-relaxed font-medium mb-6">
                     {point.content}
                   </p>
                   <div className="flex flex-wrap gap-3">
@@ -302,7 +302,7 @@ const MobileMethodology = () => {
       <footer className="py-40 bg-slate-900 text-center overflow-hidden relative">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500" />
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-10 tracking-tighter">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white mb-10 tracking-tighter">
             Ready to Build a <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">Professional Mobile App?</span>
           </h2>

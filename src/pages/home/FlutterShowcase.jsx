@@ -33,7 +33,7 @@ const FlutterShowcase = () => {
           viewport={{ once: true }}
         >
           <span className="text-indigo-600 font-bold tracking-widest uppercase text-sm">Specialization</span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-2 dark:text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 dark:text-white leading-tight">
             Flutter Expert <br />
             <span className="text-indigo-600">1+ Year Excellence</span>
           </h2>
@@ -174,9 +174,9 @@ const FlutterShowcase = () => {
             <motion.div
               animate={{ y: [0, -15, 0], x: [0, 5, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -right-14 top-[20%] z-20 group"
+              className="absolute -right-4 sm:-right-14 top-[20%] z-20 group"
             >
-              <div className="bg-white dark:bg-gray-800 shadow-[0_20px_40px_rgba(0,0,0,0.1)] p-5 rounded-[2rem] border border-gray-100 dark:border-white/10 backdrop-blur-xl">
+              <div className="bg-white dark:bg-gray-800 shadow-[0_20px_40px_rgba(0,0,0,0.1)] p-3 sm:p-5 rounded-[1.5rem] sm:rounded-[2rem] border border-gray-100 dark:border-white/10 backdrop-blur-xl">
                  <div className="w-10 h-10 rounded-2xl bg-sky-50 dark:bg-sky-900/30 flex items-center justify-center text-sky-500 text-2xl group-hover:scale-110 transition-transform">
                     <SiFlutter />
                  </div>
@@ -187,9 +187,9 @@ const FlutterShowcase = () => {
             <motion.div
               animate={{ y: [0, 15, 0], x: [0, -5, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -left-16 bottom-[30%] z-20 group"
+              className="absolute -left-4 sm:-left-16 bottom-[30%] z-20 group"
             >
-              <div className="bg-white dark:bg-gray-800 shadow-[0_20px_40px_rgba(0,0,0,0.1)] p-5 rounded-[2rem] border border-gray-100 dark:border-white/10 backdrop-blur-xl">
+              <div className="bg-white dark:bg-gray-800 shadow-[0_20px_40px_rgba(0,0,0,0.1)] p-3 sm:p-5 rounded-[1.5rem] sm:rounded-[2rem] border border-gray-100 dark:border-white/10 backdrop-blur-xl">
                  <div className="w-10 h-10 rounded-2xl bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center text-amber-500 text-2xl group-hover:scale-110 transition-transform">
                     <SiFirebase />
                  </div>
