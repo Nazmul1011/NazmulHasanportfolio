@@ -32,12 +32,12 @@ const FlutterShowcase = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-indigo-600 font-bold tracking-widest uppercase text-sm">Specialization</span>
+          <span className="text-black dark:text-indigo-400 font-bold tracking-widest uppercase text-sm">Specialization</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 dark:text-white leading-tight">
             Flutter Expert <br />
             <span className="text-indigo-600">1+ Year Excellence</span>
           </h2>
-          <p className="mt-6 text-gray-600 dark:text-gray-400 text-lg max-w-lg">
+          <p className="mt-6 text-black dark:text-gray-400 text-lg max-w-lg">
             Focusing on delivering high-performance cross-platform applications that provide native experiences on both iOS and Android.
           </p>
 
@@ -53,8 +53,8 @@ const FlutterShowcase = () => {
               >
                 <div className="mt-1 text-2xl">{f.icon}</div>
                 <div>
-                  <h4 className="font-bold dark:text-white">{f.title}</h4>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{f.desc}</p>
+                  <h4 className="font-bold text-black dark:text-white">{f.title}</h4>
+                  <p className="text-black/70 dark:text-gray-400 text-sm mt-1">{f.desc}</p>
                 </div>
               </motion.div>
             ))}

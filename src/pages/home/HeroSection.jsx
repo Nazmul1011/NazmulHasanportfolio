@@ -64,9 +64,9 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
-        className="text-gray-600 dark:text-gray-300 text-lg mb-4 flex items-center gap-2"
+        className="text-black dark:text-indigo-400 text-lg mb-4 flex items-center gap-2"
       >
-        Hi! I'm <span className="font-bold text-premium-indigo">Nazmul Hasan</span> 👋
+        Hi! I'm <span className="font-bold text-black dark:text-white">Nazmul Hasan</span> 👋
       </motion.p>
       {/* Dynamic Main Headline */}
       <div className="h-32 md:h-44 flex flex-col items-center justify-center mb-6">
@@ -85,7 +85,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="text-xl sm:text-2xl md:text-3xl text-gray-500 dark:text-gray-400 mt-2 font-light"
+          className="text-xl sm:text-2xl md:text-3xl text-black/70 dark:text-gray-400 mt-2 font-light"
         >
           Crafting Modern Digital Experiences
         </motion.span>
@@ -98,8 +98,8 @@ const HeroSection = () => {
         transition={{ delay: 0.8 }}
         className="bg-gray-100/50 dark:bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full mb-8 text-sm md:text-base border border-gray-200 dark:border-white/10"
       >
-        <span className="text-gray-500 dark:text-gray-400">Current:</span>{" "}
-        <span className="font-medium text-gray-800 dark:text-gray-200">
+        <span className="text-black/60 dark:text-indigo-400/80">Current:</span>{" "}
+        <span className="font-medium text-black dark:text-gray-200">
           Flutter Developer @ Miicon Solution
         </span>
       </motion.div>
@@ -109,10 +109,10 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-10 text-base sm:text-lg leading-relaxed font-medium"
+        className="text-black dark:text-gray-400 max-w-2xl mx-auto mb-10 text-base sm:text-lg leading-relaxed font-medium"
       >
         I specialize in building high-performance cross-platform apps and 
-        advanced web ecosystems using <span className="text-gray-900 dark:text-white font-bold">Flutter, Next.js, and Node.js</span>. 
+        advanced web ecosystems using <span className="text-black dark:text-white font-bold">Flutter, Next.js, and Node.js</span>. 
         Focused on scalable architecture and premium user experiences.
       </motion.p>
 

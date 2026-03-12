@@ -206,7 +206,7 @@ const WebDevShowcase = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <span className="text-indigo-600 font-bold tracking-[0.4em] uppercase text-xs mb-4 block italic">Building the Future</span>
+            <span className="text-black dark:text-indigo-400 font-bold tracking-[0.4em] uppercase text-xs mb-4 block italic">Building the Future</span>
             <h2 className="text-4xl sm:text-6xl md:text-7xl font-black mt-2 dark:text-white leading-none tracking-tighter">
               Scalable <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600 italic">Web Ecosystems</span>
@@ -214,7 +214,7 @@ const WebDevShowcase = () => {
             
             <div className="mt-8 relative">
                <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-indigo-500/50 to-transparent rounded-full" />
-               <p className="ml-6 text-gray-500 dark:text-gray-400 text-xl leading-relaxed italic font-medium max-w-xl">
+               <p className="ml-6 text-black dark:text-gray-400 text-xl leading-relaxed italic font-medium max-w-xl">
                 "I don't just write code; I architect systems. My approach prioritizes scalability and performance 
                 before the first pixel is drawn. From Relational SQL to complex NoSQL clusters, I choose the stack 
                 that grows with your users."
@@ -239,11 +239,11 @@ const WebDevShowcase = () => {
                         ))}
                      </div>
                      <div className="w-px h-6 bg-gray-200 dark:bg-white/10 mx-2" />
-                     <h4 className="text-sm font-black uppercase tracking-widest text-gray-900 dark:text-white group-hover:text-indigo-500 transition-colors">
+                     <h4 className="text-sm font-black uppercase tracking-widest text-black dark:text-white group-hover:text-indigo-500 transition-colors">
                         {stack.category}
                      </h4>
                   </div>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-lg font-medium italic">
+                  <p className="text-black/80 dark:text-gray-400 text-sm leading-relaxed max-w-lg font-medium italic">
                     {stack.desc}
                   </p>
                 </motion.div>

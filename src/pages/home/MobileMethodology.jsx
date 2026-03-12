@@ -198,7 +198,7 @@ const MobileMethodology = () => {
       <header className="relative pt-32 pb-20 overflow-hidden border-b border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-darkbg/50">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-blue-500/5" />
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          <Link to="/" className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-indigo-500 mb-8 hover:translate-x-[-4px] transition-transform">
+          <Link to="/" className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-black dark:text-indigo-400 mb-8 hover:translate-x-[-4px] transition-transform">
             <FiArrowLeft className="text-lg" /> Back to Portfolio
           </Link>
           <motion.h1 
@@ -213,7 +213,7 @@ const MobileMethodology = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="mt-10 text-gray-500 dark:text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed italic"
+            className="mt-10 text-black dark:text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed italic"
           >
             "I don’t just build app screens, I build complete mobile products that thrive on user devices and stores."
           </motion.p>
@@ -247,7 +247,7 @@ const MobileMethodology = () => {
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-black dark:text-white tracking-tight mb-4 group-hover:text-indigo-500 transition-colors">
                     {point.title}
                   </h3>
-                  <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 leading-relaxed font-medium mb-6">
+                  <p className="text-base sm:text-lg text-black dark:text-gray-400 leading-relaxed font-medium mb-6">
                     {point.content}
                   </p>
                   <div className="flex flex-wrap gap-3">

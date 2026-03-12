@@ -35,7 +35,7 @@ function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <span className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-black dark:hover:text-white transition-colors">
+            <span className="text-2xl font-bold text-black dark:text-white transition-colors">
               Nazmul Hasan<span className="text-indigo-600">.</span>
             </span>
           </Link>
@@ -150,7 +150,7 @@ function Navbar() {
                   smooth={true}
                   duration={600}
                   offset={-80}
-                  className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg font-medium cursor-pointer transition-colors"
+                  className="px-4 py-2 text-black dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg font-medium cursor-pointer transition-colors"
                   onClick={(e) => handleScrollLink(e, link.to)}
                 >
                   {link.label}

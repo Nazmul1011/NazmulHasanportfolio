@@ -56,7 +56,7 @@ export default function ContactUs() {
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-indigo-600 font-bold tracking-[0.4em] uppercase text-xs mb-4 block"
+            className="text-black dark:text-indigo-400 font-bold tracking-[0.4em] uppercase text-xs mb-4 block"
           >
             Available for hire
           </motion.span>
@@ -73,7 +73,7 @@ export default function ContactUs() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-gray-500 dark:text-gray-400 text-xl leading-relaxed"
+            className="text-black dark:text-gray-400 text-xl leading-relaxed"
           >
             I’m always open to discussing new projects, creative ideas, or opportunities 
             to be part of your visions. Feel free to drop a message!
@@ -96,7 +96,7 @@ export default function ContactUs() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {/* Name Input */}
               <div className="group relative">
-                <label className="text-xs font-black uppercase tracking-widest text-gray-400 mb-3 block group-focus-within:text-indigo-500 transition-colors">Your Name</label>
+                <label className="text-xs font-black uppercase tracking-widest text-black/60 dark:text-indigo-400/80 mb-3 block group-focus-within:text-indigo-500 transition-colors">Your Name</label>
                 <div className="relative">
                    <FiUser className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-indigo-500 transition-colors" />
                    <input
@@ -111,7 +111,7 @@ export default function ContactUs() {
 
               {/* Email Input */}
               <div className="group relative">
-                <label className="text-xs font-black uppercase tracking-widest text-gray-400 mb-3 block group-focus-within:text-indigo-500 transition-colors">Email Address</label>
+                <label className="text-xs font-black uppercase tracking-widest text-black/60 dark:text-indigo-400/80 mb-3 block group-focus-within:text-indigo-500 transition-colors">Email Address</label>
                 <div className="relative">
                    <FiMail className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-indigo-500 transition-colors" />
                    <input
@@ -127,7 +127,7 @@ export default function ContactUs() {
 
             {/* Message Input */}
             <div className="group relative">
-              <label className="text-xs font-black uppercase tracking-widest text-gray-400 mb-3 block group-focus-within:text-indigo-500 transition-colors">Project Details</label>
+              <label className="text-xs font-black uppercase tracking-widest text-black/60 dark:text-indigo-400/80 mb-3 block group-focus-within:text-indigo-500 transition-colors">Project Details</label>
               <div className="relative">
                  <FiMessageSquare className="absolute left-0 top-6 text-gray-400 group-focus-within:text-indigo-500 transition-colors" />
                  <textarea
@@ -157,7 +157,7 @@ export default function ContactUs() {
           </form>
 
           {/* Side Info Cards (Hidden on mobile/tablet) */}
-          <div className="absolute -right-4 lg:-right-20 xl:-right-40 top-1/2 -translate-y-1/2 flex flex-col gap-6 hidden xl:flex">
+          <div className="absolute -right-4 lg:-right-20 xl:-right-40 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6">
              <a 
                 href="mailto:nazmultec1011@gmail.com"
                 className="bg-white dark:bg-gray-800/80 p-8 shadow-2xl rounded-3xl border border-gray-100 dark:border-white/10 w-72 backdrop-blur-lg group/card hover:-translate-y-2 transition-transform duration-300 block text-left"
